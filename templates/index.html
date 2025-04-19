@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data Dashboard</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Sidebar for navigation buttons (Left side) -->
+
+        <div class="sidebar">
+            <h2>Graph Options</h2>
+            <div class="nav-buttons">
+                <button onclick="showGraph('gender_distribution')">Gender Distribution</button>
+                <button onclick="showGraph('parent_educ_vs_score')">Parent's Education vs Score</button>
+                <button onclick="showGraph('parent_marital_vs_score')">Parent's Marital Status vs Score</button>
+                <button onclick="showGraph('ethnic_distribution')">Ethnic Group Distribution</button>
+                <button onclick="showGraph('math_boxplot')">Boxplot of Math Scores</button>
+                <button onclick="showGraph('reading_boxplot')">Boxplot of Reading Scores</button>
+                <button onclick="showGraph('writing_boxplot')">Boxplot of Writing Scores</button>
+                <button onclick="showGraph('weekly_study_vs_score')">Weekly Study Hours vs Score</button>
+                <button onclick="showGraph('practice_sport_vs_score')">Practice Sport vs Score</button>
+                <button onclick="showGraph('lunch_type_vs_score')">Lunch Type vs Score</button>
+            </div>
+        </div>
+
+        <!-- Content area for displaying graphs and student data (Right side) -->
+        <div class="content">
+            <h1>Student Data Dashboard</h1>
+            <div id="graph">
+                <img id="plot" src="" alt="Graph will appear here">
+            </div>
+            <div class="student-search">
+                <input type="number" id="student-id" placeholder="Enter Student ID">
+                <button onclick="getStudentData()">Get Student Data</button>
+            </div>
+            <div id="student-info">
+                <!-- Student data will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
